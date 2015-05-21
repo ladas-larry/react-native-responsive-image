@@ -1,6 +1,6 @@
 # React Native Responsive Image
 
-Simple React Native component, that consistently resizes itself for all diferrent iPhone display widths. 
+Simple React Native component, that resizes images for all diferrent iPhone display widths. 
 
 ##Why?
 
