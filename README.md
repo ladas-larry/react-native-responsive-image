@@ -1,15 +1,16 @@
 # React Native Responsive Image
 
-Simple React Native component, that resizes images for all diferrent iPhone display widths. 
+React Native Image component, that resizes itself appropriately on all different iOS screens. 
 
 ##Why?
 
-Problem is that ract native units for image size are rendered in the way for iPhone4/5, iPhone6 and iPhone6 Plus. Thought desired behaviour in the real app is to have images that scales to the certain width, so they wouldn't breat the layout on different iPhones.
+React Native Image size is rendered the same for iPhone4/5, iPhone6 and iPhone6 Plus. 
+Desired behaviour in the real world is to have Image component, that scales relatively.
 
 
 ##Usage
 
-All you need to do is download the component's code, require the compenent and then set it's `initWidth` and `initHeight` props. This values stays the same on iPhone4/5 and the are correctly
+All you need to do is download the component's code, require the component and then set it's `initWidth` and `initHeight` props. This values stays the same on iPhone4/5 and the are correctly
 increased for iPhone6 and iPhone6 Plus.
 
 
@@ -22,24 +23,21 @@ var {
   View,
 } = React;
 
-var AwesomeProject = React.createClass({
+var ResponsiveImage = React.createClass({
   render: function() {
     return (
-      <View style={styles.container}>
+      <View style={{
+                       flex: 1,
+                       justifyContent: 'center',
+                     }}>
         <ResponsiveImage source={{uri: 'http:' + item.profile_picture.href}} initWidth="80" initHeight="80" item={item} />
       </View>
     );
   }
 });
 
-var styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-  }
-});
 
-AppRegistry.registerComponent('AwesomeProject', () => AwesomeProject);
+AppRegistry.registerComponent('AwesomeProject', () => ResponsiveImage);
 
 
 ```
