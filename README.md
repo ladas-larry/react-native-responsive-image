@@ -10,7 +10,7 @@ Desired behaviour in the real world is to have <Image> component, that scales re
 
 ##Usage
 
-`npm install`
+`npm install react-native-responsive-image --save`
 
 All you need to do is download the component's code, require the component and then set it's `initWidth` and `initHeight` props. 
 
@@ -38,10 +38,7 @@ var ResponsiveImage = React.createClass({
   }
 });
 
-
 AppRegistry.registerComponent('AwesomeProject', () => ResponsiveImage);
-
-
 ```
 
 ##Todo
