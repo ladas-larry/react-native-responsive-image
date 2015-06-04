@@ -10,9 +10,14 @@ Desired behaviour in the real world is to have <Image> component, that scales re
 
 ##Usage
 
+`npm install`
+
 All you need to do is download the component's code, require the component and then set it's `initWidth` and `initHeight` props. 
+
 These values are used as they are on iPhone6 Plus, and they are scaled down for iPhone4/5/6.
 
+
+##Example
 
 ```javascript
 var React = require('react-native');
@@ -26,10 +31,7 @@ var {
 var ResponsiveImage = React.createClass({
   render: function() {
     return (
-      <View style={{
-                       flex: 1,
-                       justifyContent: 'center',
-                     }}>
+      <View style={{flex: 1, justifyContent: 'center',}}>
         <ResponsiveImage source={{uri: 'http:' + item.profile_picture.href}} initWidth="80" initHeight="80" item={item} />
       </View>
     );

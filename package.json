@@ -1,5 +1,5 @@
 {
-  "name": "react-native-responsive-images",
+  "name": "react-native-responsive-image",
   "version": "0.0.9",
   "description": "Image component, that resizes itself appropriately on all different iOS screens.",
   "main": "react-native-responsive-image.js",
