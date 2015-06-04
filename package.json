@@ -1,0 +1,27 @@
+{
+  "name": "react-native-responsive-images",
+  "version": "0.0.9",
+  "description": "Image component, that resizes itself appropriately on all different iOS screens.",
+  "main": "react-native-responsive-image.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dharmoslap/react-native-responsive-images.git"
+  },
+  "keywords": [
+    "React",
+    "Native"
+  ],
+  "author": "Ladislav Maxa <ladislavmaxa@outlook.com> (https://github.com/Dharmoslap)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dharmoslap/react-native-responsive-images/issues"
+  },
+  "homepage": "https://github.com/Dharmoslap/react-native-responsive-images#readme",
+  "dependencies": {
+    "react-native": "^0.4.4",
+    "react-native-device": "^0.2.0"
+  }
+}
