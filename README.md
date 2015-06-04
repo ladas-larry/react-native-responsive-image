@@ -14,7 +14,7 @@ All you need to do is download the component's code, require the component and t
 These values are used as they are on iPhone6 Plus, and they are scaled down for iPhone4/5/6.
 
 
-```
+```javascript
 var React = require('react-native');
 var ResponsiveImage = require('./ResponsiveImage');
 var {
