@@ -45,4 +45,6 @@ AppRegistry.registerComponent('AwesomeProject', () => ResponsiveImage);
 
 ##Todo
 
+- get rid of `react-native-device` dependency
+
 - iPad version
