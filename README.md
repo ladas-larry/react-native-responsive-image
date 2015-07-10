@@ -21,6 +21,8 @@ These values are used as they are on iPhone6 Plus, and they are scaled down for 
 
 ##Example
 
+Four images in one full-width row:
+
 ```javascript
 var React = require('react-native');
 var ResponsiveImage = require('react-native-responsive-image');
