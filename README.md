@@ -62,6 +62,6 @@ But solution that worked the best for me was different. Actually you need to ser
 
 ##Todo
 
-- Universal for iPhone and iPad (like [https://github.com/GertjanReynaert/react-native-universal](https://github.com/GertjanReynaert/react-native-universal)
+- Universal for iPhone and iPad - like [https://github.com/GertjanReynaert/react-native-universal](https://github.com/GertjanReynaert/react-native-universal)
 
 - Suggestions and issues are always welcome!!
