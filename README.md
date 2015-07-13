@@ -1,6 +1,6 @@
 # React Native Responsive Image
 
-React Native `<Image>` component, that resizes itself appropriately on all different iOS screens. 
+React Native `<Image>` component, that rescales itselfs correctly on iOS devices. 
 
 ##Why?
 
