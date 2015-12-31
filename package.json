@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/Dharmoslap/react-native-responsive-images#readme",
   "dependencies": {
-    "react-native": ">0.4.4"
+    "react-native": "0.17.x"
   }
 }
