@@ -1,11 +1,11 @@
 # React Native Responsive Image
 
-React Native `<Image>` component, that rescales itselfs correctly on iOS devices. 
+React Native `<Image>` component, that rescales itselfs correctly on iOS and Android devices. 
 
 ##Why?
 
-React Native's Image size is rendered the same for iPhone4/5, iPhone6 and iPhone6 Plus. 
-Desired behaviour in is to have a component, that scales relatively.
+React Native's Image size is rendered the same regardless of device size and resolution. 
+Desired behaviour in is to have a component, that scales appropriately.
 
 ##Installation
 
@@ -16,12 +16,12 @@ Desired behaviour in is to have a component, that scales relatively.
 
 Use the `<ResponsiveImage>` component and set it's `initWidth` and `initHeight` props. 
 
-These values are used as they are on iPhone6 Plus, and they are scaled down for iPhone4/5/6.
+These values are used as they are for iPhone6 Plus, and they are scaled down on any smaller iOS/Android device.
 
 
 ##Example
 
-Four images in one full-width row:
+Three images in one full-width row:
 
 ```javascript
 var React = require('react-native');
@@ -37,10 +37,9 @@ var App = React.createClass({
     return (
         <View style={{flex: 1, justifyContent: 'center',}}>
             <View style={{flexDirection: 'row',}}>
-                <ResponsiveImage source={{uri: 'http://facebook.github.io/react/img/logo_og.png'}} initWidth="103.5" initHeight="103.5" style={{borderWidth: 1, borderColor: '#ffffff',}}/>
-                <ResponsiveImage source={{uri: 'http://facebook.github.io/react/img/logo_og.png'}} initWidth="103.5" initHeight="103.5" style={{borderWidth: 1, borderColor: '#ffffff',}}/>
-                <ResponsiveImage source={{uri: 'http://facebook.github.io/react/img/logo_og.png'}} initWidth="103.5" initHeight="103.5" style={{borderWidth: 1, borderColor: '#ffffff',}}/>
-                <ResponsiveImage source={{uri: 'http://facebook.github.io/react/img/logo_og.png'}} initWidth="103.5" initHeight="103.5" style={{borderWidth: 1, borderColor: '#ffffff',}}/>
+  	 				<ResponsiveImage source={{uri: 'http://facebook.github.io/react/img/logo_og.png'}} initWidth="138" initHeight="138"/>
+                    <ResponsiveImage source={{uri: 'http://facebook.github.io/react/img/logo_og.png'}} initWidth="138" initHeight="138"/>
+                    <ResponsiveImage source={{uri: 'http://facebook.github.io/react/img/logo_og.png'}} initWidth="138" initHeight="138"/>
             </View>
          </View>
     );
@@ -58,10 +57,3 @@ It sounds like you would save some bytes by delivering less-resolution images to
 But solution that worked the best for me was different. Actually you need to serve just one high-resolution compressed, and it will even save more bytes. Though @2x or @3x images have more pixels, it’s surprising how much they can be compressed.
 
 ![Retina Compression](http://blog.teamtreehouse.com/wp-content/uploads/2014/12/jpeg-example.jpg)
-
-
-##Todo
-
-- Universal for iPhone and iPad - like [https://github.com/GertjanReynaert/react-native-universal](https://github.com/GertjanReynaert/react-native-universal)
-
-- Suggestions and issues are always welcome!!
