@@ -1,10 +1,6 @@
 var React = require('react-native');
 var Device = require('./device');
-
-
-var {
-    Image,
-    } = React;
+var { Image } = React;
 
 var ResponsiveImage = React.createClass({
     render: function () {
