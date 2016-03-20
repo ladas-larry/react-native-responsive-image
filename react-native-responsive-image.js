@@ -7,7 +7,9 @@ var ResponsiveImage = React.createClass({
         var width = Math.ceil(this.props.initWidth * Device.scale);
         var height = Math.ceil(this.props.initHeight * Device.scale);
         return (
-            <Image style={[{width: width, height: height}, this.props.style]} source={this.props.source}/>
+            <Image style={[{width: width, height: height}, this.props.style]} source={this.props.source}>
+                {this.props.children}
+            </Image>
         );
     }
 });
