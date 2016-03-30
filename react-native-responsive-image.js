@@ -3,6 +3,9 @@ var Device = require('./device');
 var { Image } = React;
 
 var ResponsiveImage = React.createClass({
+    setNativeProps (nativeProps) {
+        this._root.setNativeProps(nativeProps);
+    },
     render: function () {
         var width = Math.ceil(this.props.initWidth * Device.scale);
         var height = Math.ceil(this.props.initHeight * Device.scale);
