@@ -3,7 +3,7 @@ var Device = require('./device');
 var { Image } = React;
 
 var ResponsiveImage = React.createClass({
-    setNativeProps (nativeProps) {
+    setNativeProps: function(nativeProps) {
         this._root.setNativeProps(nativeProps);
     },
     render: function () {
