@@ -22,6 +22,6 @@ Run "react-native run-android"
 
 ##Development
 
-Always modify react-native-responsive-image.js it the root directory
+Always modify react-native-responsive-image.js in the root directory
 
 Propagate changes from component to example project using "cp ./react-native-responsive-image.js ./ResponsiveImageExample/node_modules/react-native-responsive-image/react-native-responsive-image.js"

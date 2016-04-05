@@ -1,13 +1,13 @@
 {
   "name": "ResponsiveImageExample",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
   "scripts": {
     "start": "node_modules/react-native/packager/packager.sh"
   },
   "dependencies": {
-    "react": "^0.14.8",
+    "react": "0.14.x",
     "react-native": "0.22.x",
-    "react-native-responsive-image": "1.1.x"
+    "react-native-responsive-image": "1.x.x"
   }
 }
