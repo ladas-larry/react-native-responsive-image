@@ -11,6 +11,7 @@ Desired behaviour in is to have a component, that scales appropriately.
 
 `npm install react-native-responsive-image --save`
 
+
 ##Usage
 
 
