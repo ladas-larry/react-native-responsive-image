@@ -1,6 +1,6 @@
-var React = require('react-native');
+var React = require('react');
 var Device = require('./device');
-var { Image } = React;
+var { Image } = require('react-native');
 
 var ResponsiveImage = React.createClass({
     setNativeProps: function(nativeProps) {
