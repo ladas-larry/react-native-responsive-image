@@ -58,3 +58,39 @@ It sounds like you would save some bytes by delivering less-resolution images to
 But solution that worked the best for me was different. Actually you need to serve just one high-resolution compressed, and it will even save more bytes. Though @2x or @3x images have more pixels, it’s surprising how much they can be compressed.
 
 ![Retina Compression](http://blog.teamtreehouse.com/wp-content/uploads/2014/12/jpeg-example.jpg)
+
+
+
+##Example project
+
+###Create project
+
+`react-native init ResponsiveImageExample`
+
+`cp ./example/index.android.js ./ResponsiveImageExample/index.android.js`
+
+`cp ./example/index.ios.js ./ResponsiveImageExample/index.ios.js`
+
+`cd ResponsiveImageExample`
+
+`npm i react-native-responsive-image`
+
+
+###Run on iOS
+
+Open ./ResponsiveImageExample/ios/ResponsiveImageExample.xcodeproj
+
+Run the project inside iOS Simulator simulator
+
+###Run on Android
+
+Go to ./ResponsiveImageExample/
+
+`react-native run-android`
+
+##Development
+
+1. Modify react-native-responsive-image.js in the root directory
+
+2. Propagate changes `cp ./react-native-responsive-image.js ./ResponsiveImageExample/node_modules/react-native-responsive-image/react-native-responsive-image.js`
+
