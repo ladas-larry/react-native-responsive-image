@@ -1,5 +1,5 @@
-var React = require('react-native');
-var { Dimensions } = React;
+var React = require('react');
+var { Dimensions } = require('react-native');
 
 var device = Dimensions.get('window');
 var scale;
