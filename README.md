@@ -1,5 +1,12 @@
 # React Native Responsive Image
 
+[![David](https://david-dm.org/danielstocks/react-native-responsive-image.svg)](https://david-dm.org/danielstocks/react-native-responsive-image)
+[![npm](https://img.shields.io/npm/v/react-native-responsive-image.svg)](https://www.npmjs.com/package/react-native-responsive-image)
+[![GitHub commits](https://img.shields.io/github/commits-since/dharmoslap/react-native-responsive-image/1.3.0.svg?maxAge=2592000)]()
+[![npm](https://img.shields.io/npm/dt/react-native-responsive-image.svg?maxAge=2592000)](https://www.npmjs.com/package/react-native-responsive-image)
+
+
+
 React Native `<Image>` component, that rescales itselfs correctly on iOS and Android devices. 
 
 ##Why?
