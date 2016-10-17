@@ -12,7 +12,13 @@ var ResponsiveImage = React.createClass({
         return (
             <Image style={[{width: width, height: height}, this.props.style]}
                    source={this.props.source}
-                   ref={component => this._root = component}>
+                   ref={component => this._root = component}
+                   onLoadStart={this.props.onLoadStart}
+                   onProgress={this.props.onProgress}
+                   onLoad={this.props.onLoad}
+                   onError={this.props.onError}
+                   onLoadEnd={this.props.onLoadEnd}
+                   >
                 {this.props.children}
             </Image>
         );
