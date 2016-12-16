@@ -1,5 +1,5 @@
 var React = require('react');
-var Device = require('./device');
+var applyScale = require('./applyScale');
 var { Image } = require('react-native');
 
 var ResponsiveImage = React.createClass({
@@ -7,8 +7,8 @@ var ResponsiveImage = React.createClass({
         this._root.setNativeProps(nativeProps);
     },
     render: function () {
-        var width = Math.ceil(this.props.initWidth * Device.scale);
-        var height = Math.ceil(this.props.initHeight * Device.scale);
+        var width = applyScale(this.props.initWidth);
+        var height = applyScale(this.props.initHeight);
         return (
             <Image style={[{width: width, height: height}, this.props.style]}
                    source={this.props.source}
