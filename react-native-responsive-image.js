@@ -12,7 +12,8 @@ var ResponsiveImage = React.createClass({
         return (
             <Image style={[{width: width, height: height}, this.props.style]}
                    source={this.props.source}
-                   ref={component => this._root = component}>
+                   ref={component => this._root = component}
+                   resizeMode={this.props.resize ? 'contain' : 'stretch'}>
                 {this.props.children}
             </Image>
         );
