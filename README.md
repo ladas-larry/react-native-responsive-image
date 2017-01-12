@@ -32,29 +32,25 @@ These values are used as they are for iPhone6 Plus, and they are scaled down on 
 Three images in one full-width row:
 
 ```javascript
-var React = require('react-native');
-var ResponsiveImage = require('react-native-responsive-image');
-var {
-  AppRegistry,
-  StyleSheet,
-  View,
-} = React;
+import React, { Component } from 'react';
+import { AppRegistry, StyleSheet, View } from 'react-native';
+import ResponsiveImage from 'react-native-responsive-image';
 
-var App = React.createClass({
-  render: function() {
+class App extends Component {
+  render() {
     return (
-        <View style={{flex: 1, justifyContent: 'center',}}>
-            <View style={{flexDirection: 'row',}}>
-  	 				<ResponsiveImage source={{uri: 'http://facebook.github.io/react/img/logo_og.png'}} initWidth="138" initHeight="138"/>
-                    <ResponsiveImage source={{uri: 'http://facebook.github.io/react/img/logo_og.png'}} initWidth="138" initHeight="138"/>
-                    <ResponsiveImage source={{uri: 'http://facebook.github.io/react/img/logo_og.png'}} initWidth="138" initHeight="138"/>
+      <View style={{flex: 1, justifyContent: 'center',}}>
+                <View style={{flexDirection: 'row',}}>
+                    <ResponsiveImage source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}} initWidth="138" initHeight="138"/>
+                    <ResponsiveImage source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}} initWidth="138" initHeight="138"/>
+                    <ResponsiveImage source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}} initWidth="138" initHeight="138"/>
+                </View>
             </View>
-         </View>
     );
   }
-});
+}
 
-AppRegistry.registerComponent('AwesomeProject', () => App);
+AppRegistry.registerComponent('ResponsiveImageExample', () => App);
 ```
 
 ##One image size?
@@ -85,13 +81,13 @@ But solution that worked the best for me was different. Actually you need to ser
 
 ###Run on iOS
 
-Open ./ResponsiveImageExample/ios/ResponsiveImageExample.xcodeproj
+Open ResponsiveImageExample/ios/ResponsiveImageExample.xcodeproj
 
 Run the project inside iOS Simulator simulator
 
 ###Run on Android
 
-Go to ./ResponsiveImageExample/
+Go to ResponsiveImageExample
 
 `react-native run-android`
 
