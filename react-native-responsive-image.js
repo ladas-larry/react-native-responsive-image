@@ -6,7 +6,7 @@ export default class ResponsiveImage extends Component {
     setNativeProps(nativeProps) {
         this._root.setNativeProps(nativeProps);
     }
-    
+
     render(){
         var width = applyScale(this.props.initWidth);
         var height = applyScale(this.props.initHeight);
@@ -20,10 +20,10 @@ export default class ResponsiveImage extends Component {
                    onLoad={this.props.onLoad}
                    onError={this.props.onError}
                    onLoadEnd={this.props.onLoadEnd}
+                   defaultSource={this.props.defaultSource}
                    >
                 {this.props.children}
             </Image>
         );
     }
 }
-

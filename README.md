@@ -7,11 +7,11 @@
 
 
 
-React Native `<Image>` component, that rescales itselfs correctly on iOS and Android devices. 
+React Native `<Image>` component, that rescales itselfs correctly on iOS and Android devices.
 
 ##Why?
 
-React Native's Image size is rendered the same regardless of device size and resolution. 
+React Native's Image size is rendered the same regardless of device size and resolution.
 Desired behaviour in is to have a component, that scales appropriately.
 
 ##Installation
@@ -22,7 +22,7 @@ Desired behaviour in is to have a component, that scales appropriately.
 ##Usage
 
 
-Use the `<ResponsiveImage>` component and set it's `initWidth` and `initHeight` props. 
+Use the `<ResponsiveImage>` component and set it's `initWidth` and `initHeight` props.
 
 These values are used as they are for iPhone6 Plus, and they are scaled down on any smaller iOS/Android device.
 
@@ -56,13 +56,18 @@ AppRegistry.registerComponent('ResponsiveImageExample', () => App);
 ##One image size?
 
 We could have added support for multiple image sources, like [https://github.com/exponentjs/react-native-responsive-image]([https://github.com/exponentjs/react-native-responsive-image]) has.
-It sounds like you would save some bytes by delivering less-resolution images to devices with lower resolution. 
+It sounds like you would save some bytes by delivering less-resolution images to devices with lower resolution.
 
 But solution that worked the best for me was different. Actually you need to serve just one high-resolution compressed, and it will even save more bytes. Though @2x or @3x images have more pixels, it’s surprising how much they can be compressed.
 
 ![Retina Compression](http://blog.teamtreehouse.com/wp-content/uploads/2014/12/jpeg-example.jpg)
 
-
+##A static image to display while loading the image source?
+```javascript
+<ResponsiveImage
+  source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}} initWidth="138" initHeight="138"
+  defaultSource={require('placeholder.png')} />
+```
 
 ##Example project
 
@@ -96,4 +101,3 @@ Go to ResponsiveImageExample
 1. Modify react-native-responsive-image.js in the root directory
 
 2. Propagate changes `cp ./react-native-responsive-image.js ./ResponsiveImageExample/node_modules/react-native-responsive-image/react-native-responsive-image.js`
-
