@@ -9,17 +9,17 @@
 
 React Native `<Image>` component, that rescales itselfs correctly on iOS and Android devices.
 
-##Why?
+## Why?
 
 React Native's Image size is rendered the same regardless of device size and resolution.
 Desired behaviour in is to have a component, that scales appropriately.
 
-##Installation
+## Installation
 
 `npm install react-native-responsive-image --save`
 
 
-##Usage
+## Usage
 
 
 Use the `<ResponsiveImage>` component and set it's `initWidth` and `initHeight` props.
@@ -27,7 +27,7 @@ Use the `<ResponsiveImage>` component and set it's `initWidth` and `initHeight` 
 These values are used as they are for iPhone6 Plus, and they are scaled down on any smaller iOS/Android device.
 
 
-##Example
+## Example
 
 Three images in one full-width row:
 
@@ -53,7 +53,7 @@ class App extends Component {
 AppRegistry.registerComponent('ResponsiveImageExample', () => App);
 ```
 
-##One image size?
+## One image size?
 
 We could have added support for multiple image sources, like [https://github.com/exponentjs/react-native-responsive-image]([https://github.com/exponentjs/react-native-responsive-image]) has.
 It sounds like you would save some bytes by delivering less-resolution images to devices with lower resolution.
@@ -62,16 +62,16 @@ But solution that worked the best for me was different. Actually you need to ser
 
 ![Retina Compression](http://blog.teamtreehouse.com/wp-content/uploads/2014/12/jpeg-example.jpg)
 
-##A static image to display while loading the image source?
+## A static image to display while loading the image source?
 ```javascript
 <ResponsiveImage
   source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}} initWidth="138" initHeight="138"
   defaultSource={require('placeholder.png')} />
 ```
 
-##Example project
+## Example project
 
-###Create project
+### Create project
 
 `react-native init ResponsiveImageExample`
 
@@ -84,19 +84,19 @@ But solution that worked the best for me was different. Actually you need to ser
 `npm i react-native-responsive-image`
 
 
-###Run on iOS
+### Run on iOS
 
 Open ResponsiveImageExample/ios/ResponsiveImageExample.xcodeproj
 
 Run the project inside iOS Simulator simulator
 
-###Run on Android
+### Run on Android
 
 Go to ResponsiveImageExample
 
 `react-native run-android`
 
-##Development
+## Development
 
 1. Modify react-native-responsive-image.js in the root directory
 
