@@ -2,7 +2,7 @@
 
 [![David](https://david-dm.org/dharmoslap/react-native-responsive-image.svg)](https://david-dm.org/dharmoslap/react-native-responsive-image)
 [![npm](https://img.shields.io/npm/v/react-native-responsive-image.svg)](https://www.npmjs.com/package/react-native-responsive-image)
-[![GitHub commits](https://img.shields.io/github/commits-since/dharmoslap/react-native-responsive-image/1.3.0.svg?maxAge=2592000)]()
+[![GitHub commits](https://img.shields.io/github/commits-since/dharmoslap/react-native-responsive-image/2.0.2.svg?maxAge=2592000)]()
 [![npm](https://img.shields.io/npm/dt/react-native-responsive-image.svg?maxAge=2592000)](https://www.npmjs.com/package/react-native-responsive-image)
 
 
@@ -98,6 +98,10 @@ Go to ResponsiveImageExample
 
 ##Development
 
-1. Modify react-native-responsive-image.js in the root directory
+To propagate changes from the component package to example project: 
 
-2. Propagate changes `cp ./react-native-responsive-image.js ./ResponsiveImageExample/node_modules/react-native-responsive-image/react-native-responsive-image.js`
+1. run 'npm link' in the root directory.
+
+2. go to '/ResponsiveImageExample' and run 'npm link react-native-responsive-images'
+
+This will create symlink for the package, so now you can import from 'react-native-responsive-image'
