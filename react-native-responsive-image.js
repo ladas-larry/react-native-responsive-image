@@ -14,7 +14,7 @@ export default class ResponsiveImage extends Component {
             <Image style={[{width: width, height: height}, this.props.style]}
                    source={this.props.source}
                    ref={component => this._root = component}
-                   resizeMode={this.props.resize ? 'contain' : 'stretch'}
+                   resizeMode={this.props.resizeMode || 'cover'}
                    onLoadStart={this.props.onLoadStart}
                    onProgress={this.props.onProgress}
                    onLoad={this.props.onLoad}
