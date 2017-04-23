@@ -9,9 +9,9 @@ class App extends Component {
     return (
       <View style={{flex: 1, justifyContent: 'center',}}>
                 <View style={{flexDirection: 'row',}}>
-                    <ResponsiveImage source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}} initWidth="138" initHeight="138"/>
-                    <ResponsiveImage source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}} initWidth="138" initHeight="138"/>
-                    <ResponsiveImage source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}} initWidth="138" initHeight="138"/>
+                    <ResponsiveImage source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}} initWidth="138" initHeight="138" defaultSource={require('./placeholder.png')}/>
+                    <ResponsiveImage source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}} initWidth="138" initHeight="138" defaultSource={require('./placeholder.png')}/>
+                    <ResponsiveImage source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}} initWidth="138" initHeight="138" defaultSource={require('./placeholder.png')}/>
                 </View>
             </View>
     );
