@@ -100,4 +100,4 @@ Go to ResponsiveImageExample
 
 1. Modify react-native-responsive-image.js in the root directory
 
-2. Propagate changes `cp ./react-native-responsive-image.js ./ResponsiveImageExample/node_modules/react-native-responsive-image/react-native-responsive-image.js`
+2. Propagate changes `cp ./react-native-responsive-image.js ./ResponsiveImageExample/node_modules/react-native-responsive-image/react-native-responsive-image.js` to see the changes reflected inside example project
