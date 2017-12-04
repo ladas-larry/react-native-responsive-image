@@ -11,6 +11,7 @@ node_modules
 # if you remove the above rule, at least ignore the following:
 
 /ResponsiveImageExample/
+/ResponsiveImageExample/node_modules
 
 
 # User-specific stuff:

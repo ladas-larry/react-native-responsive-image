@@ -73,31 +73,27 @@ But solution that worked the best for me was different. Actually you need to ser
 
 ### Create project
 
-`react-native init ResponsiveImageExample`
+`create-react-native-app ResponsiveImageExample`
 
-`cp ./example/index.android.js ./ResponsiveImageExample/index.android.js`
+`cp ./example/App.js ./ResponsiveImageExample/App.js`
 
-`cp ./example/index.ios.js ./ResponsiveImageExample/index.ios.js`
+`cp -R ./src ./ResponsiveImageExample/src`
 
 `cd ResponsiveImageExample`
 
-`npm i react-native-responsive-image`
+`yarn start`
 
 
 ### Run on iOS
 
-Open ResponsiveImageExample/ios/ResponsiveImageExample.xcodeproj
-
-Run the project inside iOS Simulator simulator
+`yarn run ios`
 
 ### Run on Android
 
-Go to ResponsiveImageExample
-
-`react-native run-android`
+`yarn run android`
 
 ## Development
 
-1. Modify react-native-responsive-image.js in the root directory
+1. Modify any files in ./src directory
 
-2. Propagate changes `cp ./react-native-responsive-image.js ./ResponsiveImageExample/node_modules/react-native-responsive-image/react-native-responsive-image.js` to see the changes reflected inside example project
+2. Propagate changes by `cp -R ./src ./ResponsiveImageExample/src`
