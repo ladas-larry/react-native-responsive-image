@@ -22,6 +22,7 @@ export default class ResponsiveImage extends Component {
                 onError={this.props.onError}
                 onLoadEnd={this.props.onLoadEnd}
                 defaultSource={this.props.defaultSource}
+                borderRadius={this.props.borderRadius}
             >
                 {this.props.children}
             </Image>
