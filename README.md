@@ -83,15 +83,6 @@ But solution that worked the best for me was different. Actually you need to ser
 
 `yarn start`
 
-
-### Run on iOS
-
-`yarn run ios`
-
-### Run on Android
-
-`yarn run android`
-
 ## Development
 
 1. Modify any files in ./src directory
