@@ -64,7 +64,7 @@ So for `initWidth=138` it looks like this:
 | iPad (or any tablet) | -            | 1     | 138           |
 
 
-## Just one image for all?
+## Just one image?
 
 It sounds like you could save some loading by delivering low resolution images to screens with lower resolution. The best way is to serve just one high-resolution (retina) well compressed image. It’s surprising how well they can be compressed, and the result looks the same.
 
