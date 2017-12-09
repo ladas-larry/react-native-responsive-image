@@ -53,7 +53,7 @@ AppRegistry.registerComponent('ResponsiveImageExample', () => App);
 ```
 
 
-So for initWidth = 138 it looks like this:
+So for `initWidth=138` it looks like this:
 
 | Device               | Screen width | Scale | `<Image>` width |
 |----------------------|--------------|-------|---------------|
