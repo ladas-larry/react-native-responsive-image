@@ -5,14 +5,10 @@
 [![GitHub commits](https://img.shields.io/github/commits-since/dharmoslap/react-native-responsive-image/2.1.0.svg?maxAge=2592000)]()
 [![npm](https://img.shields.io/npm/dt/react-native-responsive-image.svg?maxAge=2592000)](https://www.npmjs.com/package/react-native-responsive-image)
 
-
-
-React Native `<Image>` component, that rescales itselfs correctly on iOS and Android devices.
-
 ## Why?
 
-React Native's Image size is rendered the same regardless of device size and resolution.
-Desired behaviour in is to have a component, that scales appropriately.
+React Native's Image size is rendered the same regardless of device screen size and screen resolution.
+This component scales itself seemlesly on all iOS and Annroid devices.
 
 ## Installation
 
@@ -22,9 +18,14 @@ Desired behaviour in is to have a component, that scales appropriately.
 ## Usage
 
 
-Use the `<ResponsiveImage>` component and set it's `initWidth` and `initHeight` props.
+`<ResponsiveImage>` is expecting `initWidth` and `initHeight` props.
 
-These values are used as they are for iPhone6 Plus, and they are scaled down on any smaller iOS/Android device.
+These values are used to set image size on any device that has screen size iPhone Plus, or larger.
+
+Image is then scaled down for any smaller device.
+
+For additional configuration you can pass the same props as for original [`<Image>`](https://facebook.github.io/react-native/docs/image.html) component.
+
 
 
 ## Example
@@ -51,21 +52,24 @@ class App extends Component {
 AppRegistry.registerComponent('ResponsiveImageExample', () => App);
 ```
 
-## One image size?
 
-We could have added support for multiple image sources, like [https://github.com/exponentjs/react-native-responsive-image]([https://github.com/exponentjs/react-native-responsive-image]) has.
-It sounds like you would save some bytes by delivering less-resolution images to devices with lower resolution.
+So for initWidth = 138 it looks like this:
 
-But solution that worked the best for me was different. Actually you need to serve just one high-resolution compressed, and it will even save more bytes. Though @2x or @3x images have more pixels, it’s surprising how much they can be compressed.
+| Device               | Screen width | Scale | `<Image>` width |
+|----------------------|--------------|-------|---------------|
+| iPhone SE            | 320          | 0.77  | 106           |
+| iPhone X             | 375          | 0.902 | 117           |
+| iPhone8 Plus         | 414          | 1     | 138           |
+| Nokia 5              | 360          | 0.87  | 120           |
+| iPad (or any tablet) | -            | 1     | 138           |
 
-![Retina Compression](http://blog.teamtreehouse.com/wp-content/uploads/2014/12/jpeg-example.jpg)
 
-## A static image to display while loading the image source?
-```javascript
-<ResponsiveImage
-  source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}} initWidth="138" initHeight="138"
-  defaultSource={require('placeholder.png')} />
-```
+## Just one image for all?
+
+It sounds like you could save some loading by delivering low resolution images to screens with lower resolution. The best way is to serve just one high-resolution (retina) well compressed image. It’s surprising how well they can be compressed, and the result looks the same.
+
+![Retina Compression](https://www.dropbox.com/s/0xczo2tx0uhuqzn/retina2.png?dl=0)
+
 
 ## Example project
 
