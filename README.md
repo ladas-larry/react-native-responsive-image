@@ -30,8 +30,6 @@ For additional configuration you can pass the same props as for original [`<Imag
 
 ## Example
 
-Three images in one full-width row:
-
 ```javascript
 import React, { Component } from 'react';
 import { AppRegistry, StyleSheet, View } from 'react-native';
@@ -53,7 +51,7 @@ AppRegistry.registerComponent('ResponsiveImageExample', () => App);
 ```
 
 
-So for `initWidth=138` it looks like this:
+For `initWidth=138` it looks like this:
 
 | Device               | Screen width | Scale | `<Image>` width |
 |----------------------|--------------|-------|---------------|
@@ -68,7 +66,7 @@ So for `initWidth=138` it looks like this:
 
 It sounds like you could save some loading by delivering low resolution images to screens with lower resolution. The best way is to serve just one high-resolution (retina) well compressed image. It’s surprising how well they can be compressed, and the result looks the same.
 
-![Retina Compression](https://www.dropbox.com/s/0xczo2tx0uhuqzn/retina2.png?dl=0)
+![Retina Compression](https://raw.githubusercontent.com/Dharmoslap/react-native-responsive-image/master/retina.png)
 
 
 ## Example project
