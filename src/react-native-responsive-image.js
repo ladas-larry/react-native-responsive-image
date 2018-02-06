@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Image } from 'react-native';
+import { ImageBackground } from 'react-native';
 import applyScale from './applyScale';
 
 export default class ResponsiveImage extends Component {
@@ -12,7 +12,7 @@ export default class ResponsiveImage extends Component {
         var width = applyScale(this.props.initWidth);
         var height = applyScale(this.props.initHeight);
         return (
-            <Image style={[{ width: width, height: height }, this.props.style]}
+            <ImageBackground style={[{ width: width, height: height }, this.props.style]}
                 source={this.props.source}
                 ref={component => this._root = component}
                 resizeMode={this.props.resizeMode || 'cover'}
@@ -25,7 +25,7 @@ export default class ResponsiveImage extends Component {
                 borderRadius={this.props.borderRadius}
             >
                 {this.props.children}
-            </Image>
+            </ImageBackground>
         );
     }
 }
