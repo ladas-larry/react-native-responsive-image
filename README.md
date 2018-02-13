@@ -8,7 +8,7 @@
 ## Why?
 
 React Native's Image size is rendered the same regardless of device screen size and screen resolution.
-This component scales itself seemlesly on all iOS and Annroid devices.
+This component scales itself seemlesly on all iOS and Android devices.
 
 ## Installation
 
