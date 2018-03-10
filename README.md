@@ -18,11 +18,14 @@ This component scales itself seemlesly on all iOS and Android devices.
 ## Usage
 
 
-`<ResponsiveImage>` is expecting `initWidth` and `initHeight` props.
+`<ResponsiveImage>` is expecting `initWidth`, `initHeight`, and `component` props.
 
-These values are used to set image size on any device that has screen size iPhone Plus, or larger.
+`initWidth` and `initHeight` are used to set image size on any device that has screen size iPhone Plus, or larger.
 
 Image is then scaled down for any smaller device.
+
+`component` is used to pass down either an `Image` or `ImageBackground` component. (defaults to `Image` if not provided)
+
 
 For additional configuration you can pass the same props as for original [`<Image>`](https://facebook.github.io/react-native/docs/image.html) component.
 
@@ -32,16 +35,16 @@ For additional configuration you can pass the same props as for original [`<Imag
 
 ```javascript
 import React, { Component } from 'react';
-import { AppRegistry, StyleSheet, View } from 'react-native';
+import { AppRegistry, StyleSheet, View, Image } from 'react-native';
 import ResponsiveImage from 'react-native-responsive-image';
 
 class App extends Component {
   render() {
     return (
       <View style={{ flexGrow: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
-          <ResponsiveImage source={{uri: 'https://reactjs.org/logo-og.png'}} initWidth="138" initHeight="138"/>
-          <ResponsiveImage source={{uri: 'https://reactjs.org/logo-og.png'}} initWidth="138" initHeight="138"/>
-          <ResponsiveImage source={{uri: 'https://reactjs.org/logo-og.png'}} initWidth="138" initHeight="138"/>
+          <ResponsiveImage source={{uri: 'https://reactjs.org/logo-og.png'}} initWidth="138" initHeight="138" component={Image}/>
+          <ResponsiveImage source={{uri: 'https://reactjs.org/logo-og.png'}} initWidth="138" initHeight="138" component={Image}/>
+          <ResponsiveImage source={{uri: 'https://reactjs.org/logo-og.png'}} initWidth="138" initHeight="138" component={Image}/>
       </View>
     );
   }
