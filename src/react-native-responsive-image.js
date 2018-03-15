@@ -32,6 +32,6 @@ export default class ResponsiveImage extends Component {
   }
 }
 
-MyComponent.defaultProps = {
+ResponsiveImage.defaultProps = {
   component: Image
 }
