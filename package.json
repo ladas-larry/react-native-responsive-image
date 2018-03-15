@@ -1,6 +1,6 @@
 {
   "name": "react-native-responsive-image",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "description": "Image component, that resizes itself appropriately on various screensizes.",
   "main": "index.js",
   "scripts": {
