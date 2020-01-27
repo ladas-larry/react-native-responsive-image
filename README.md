@@ -73,7 +73,9 @@ It sounds like you could save some loading by delivering low resolution images t
 
 ### Create project
 
-`create-react-native-app ResponsiveImageExample`
+`expo init ResponsiveImageExample`
+
+- choose the 'expo-template-blank'
 
 `cp ./example/App.js ./ResponsiveImageExample/App.js`
 
