@@ -14,53 +14,65 @@ This component scales itself seemlesly on all iOS and Android devices.
 
 `npm install react-native-responsive-image --save`
 
-
 ## Usage
 
-
 `<ResponsiveImage>` is expecting `initWidth` and `initHeight` props.
-
 
 These values are used to set image size on any device that has screen size iPhone Plus, or larger.
 Image is then scaled down for any smaller device.
 
 Optional prop `component` is used to pass down either an `Image` or `ImageBackground` imported react-native (defaults to `Image` if not provided)
 
-
-
 ## Example
 
 ```javascript
-import React, { Component } from 'react';
-import { AppRegistry, StyleSheet, View } from 'react-native';
-import ResponsiveImage from 'react-native-responsive-image';
+import React, { Component } from "react";
+import { AppRegistry, StyleSheet, View } from "react-native";
+import ResponsiveImage from "react-native-responsive-image";
 
 class App extends Component {
   render() {
     return (
-      <View style={{ flexGrow: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
-          <ResponsiveImage source={{uri: 'https://reactjs.org/logo-og.png'}} initWidth="138" initHeight="138"/>
-          <ResponsiveImage source={{uri: 'https://reactjs.org/logo-og.png'}} initWidth="138" initHeight="138"/>
-          <ResponsiveImage source={{uri: 'https://reactjs.org/logo-og.png'}} initWidth="138" initHeight="138"/>
+      <View
+        style={{
+          flexGrow: 1,
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "row"
+        }}
+      >
+        <ResponsiveImage
+          source={{ uri: "https://reactjs.org/logo-og.png" }}
+          initWidth="138"
+          initHeight="138"
+        />
+        <ResponsiveImage
+          source={{ uri: "https://reactjs.org/logo-og.png" }}
+          initWidth="138"
+          initHeight="138"
+        />
+        <ResponsiveImage
+          source={{ uri: "https://reactjs.org/logo-og.png" }}
+          initWidth="138"
+          initHeight="138"
+        />
       </View>
     );
   }
 }
 
-AppRegistry.registerComponent('ResponsiveImageExample', () => App);
+AppRegistry.registerComponent("ResponsiveImageExample", () => App);
 ```
-
 
 For `initWidth=138` it looks like this:
 
 | Device               | Screen width | Scale | `<Image>` width |
-|----------------------|--------------|-------|---------------|
-| iPhone SE            | 320          | 0.77  | 106           |
-| iPhone X             | 375          | 0.902 | 117           |
-| iPhone8 Plus         | 414          | 1     | 138           |
-| Nokia 5              | 360          | 0.87  | 120           |
-| iPad (or any tablet) | -            | 1     | 138           |
-
+| -------------------- | ------------ | ----- | --------------- |
+| iPhone SE            | 320          | 0.77  | 106             |
+| iPhone X             | 375          | 0.902 | 117             |
+| iPhone8 Plus         | 414          | 1     | 138             |
+| Nokia 5              | 360          | 0.87  | 120             |
+| iPad (or any tablet) | -            | 1     | 138             |
 
 ## Just one image?
 
@@ -68,14 +80,13 @@ It sounds like you could save some loading by delivering low resolution images t
 
 ![Retina Compression](https://raw.githubusercontent.com/Dharmoslap/react-native-responsive-image/master/retina.png)
 
-
 ## Example project
 
 ### Create project
 
 `expo init ResponsiveImageExample`
 
-- choose the 'expo-template-blank'
+- go with 'expo-template-blank'
 
 `cp ./example/App.js ./ResponsiveImageExample/App.js`
 
