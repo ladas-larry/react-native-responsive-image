@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Dharmoslap/react-native-responsive-images/issues"
   },
-  "homepage": "https://github.com/Dharmoslap/react-native-responsive-images#readme"
+  "homepage": "https://github.com/Dharmoslap/react-native-responsive-images#readme",
+  "installConfig": {
+    "pnp": true
+  }
 }
